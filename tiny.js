@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const tinify = require("tinify");
-tinify.key = "ry5RPtMmF1Y7D9Djy99JZ9SWFsvrMRFV"; // YOUR_API_KEY
+tinify.key = ""; // YOUR_API_KEY
 const { Select, MultiSelect , NumberPrompt, Input } = require('enquirer');
 const ALL = 'All of them!!!'
 
