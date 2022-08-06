@@ -1,0 +1,27 @@
+{
+  "name": "tiny_image",
+  "version": "1.0.0",
+  "description": "use tinypng REST API to compress images.",
+  "main": "tiny.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zhkjim/tiny_image_tool.git"
+  },
+  "keywords": [
+    "tiny",
+    "image"
+  ],
+  "author": "Hongkun Zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhkjim/tiny_image_tool/issues"
+  },
+  "homepage": "https://github.com/zhkjim/tiny_image_tool#readme",
+  "dependencies": {
+    "enquirer": "^2.3.6",
+    "tinify": "^1.6.1"
+  }
+}
