@@ -16,6 +16,8 @@ const config = {
   selectList: []
 }
 
+let totalCompressSize = 0;
+let totalCompressCount = 0;
 
 function listFile(dir, sizeThreshold){
 	const arr = fs.readdirSync(dir);
@@ -50,6 +52,15 @@ function compressPic() {
       const newStats = fs.statSync(item.output);
       const size =  Math.ceil(newStats.size / 1024) + 'kb';
       console.log('File:', item.name, '\tBefore:', item.size, '\tAfter:', size);
+      totalCompressCount++;
+      totalCompressSize += (parseFloat(item.size) - parseFloat(size));
+      if (totalCompressCount === config.selectList.length) {
+        if (totalCompressSize > 1024) {
+          console.log(`总共压缩了${totalCompressSize/1024}MB`);
+        } else {
+          console.log(`总共压缩了${totalCompressSize}KB`);
+        }
+      }
     }).catch(err => {
       console.log(err);
     })
