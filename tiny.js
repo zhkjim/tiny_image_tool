@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const tinify = require("tinify");
 tinify.key = ""; // YOUR_API_KEY
-const { Select, MultiSelect , NumberPrompt, Input } = require('enquirer');
+const { Select, MultiSelect, NumberPrompt, Input } = require('enquirer');
 const ALL = 'All of them!!!'
 
 const list = [];
@@ -110,6 +110,7 @@ function selectCompressPics() {
     message: '请选择需压缩的图片: ',
     limit: 10,
     choices: [ALL, ...config.filterList],
+    initial: 0,
     result(names) {
       return this.map(names);
     }
